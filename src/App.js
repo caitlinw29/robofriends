@@ -11,7 +11,7 @@ class App extends Component {
       searchfield: '',
     }
   }
-  
+
   //Arrow function here makes sure that 'this' doesn't target the input, but targets App
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
@@ -23,7 +23,7 @@ class App extends Component {
     })
     return (
       <div className='tc'>
-        <h1>RoboFriends</h1>
+        <h1 className='f1'>RoboFriends</h1>
         <SearchBox searchChange={this.onSearchChange}/>
         <CardList robots={filteredRobots}/>
       </div>
